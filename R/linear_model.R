@@ -5,6 +5,7 @@ rsk_LinearRegression <- R6::R6Class(
     initialize = function(fit_intercept, normalize, copy_X, n_jobs){
       self$pointer <- sklearn$linear_model$LinearRegression(fit_intercept, normalize, copy_X, n_jobs)
       self$pickle <- pickle$dumps(self$pointer)
+
     }
   )
 )
