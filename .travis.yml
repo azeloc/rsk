@@ -2,14 +2,14 @@
 
 language: R
 sudo: false
+install:
+  - pip install --quiet --upgrade pip
+  - pip install --quiet numpy
+  - pip install --quiet scipy
+  - pip install --quiet -U scikit-learn
 cache:
   directories:
     - $HOME/.cache/pip
     - $HOME/R/Library
 before_cache:
     - export R_LIB_USER=$HOME/R/Library
-before_install:
-  - pip install --user --quiet --upgrade pip
-  - pip install --user --quiet numpy
-  - pip install --user --quiet scipy
-  - pip install --user --quiet -U scikit-learn
